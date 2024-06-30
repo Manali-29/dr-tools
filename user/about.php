@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row align-items-center listing-row">
                 <div class="col-lg-12">
-                    <nav aria-label="breadcrumb">
+                    <nav aria-label="breadcrumb"> 
                         <ol class="breadcrumb m-0">
                           <li class="breadcrumb-item"><a href="./index.php">Home</a></li>
                           <li class="breadcrumb-item active" aria-current="page">About</li>
