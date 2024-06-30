@@ -29,7 +29,7 @@
                         <div class="product-detail-slider-main">
                             <div id="sync1" class="owl-carousel owl-theme">
                                 <div class="item">
-                                  <img src="admin/Uplode/<?php echo $row['pro_img'] ?>" alt="Image" />
+                                  <img src="../admin/Uplode/<?php echo $row['pro_img'] ?>" alt="Image" />
                                 </div>
                               </div>
                         </div>
@@ -116,7 +116,7 @@
                     <div class="products-wrap">
                         <div class="products-wrap-img position-relative">
                             <a href="./product-detail.php">
-                                <img src="admin/Uplode/<?php echo $row2['pro_img'] ?>" alt="Product" />
+                                <img src="../admin/Uplode/<?php echo $row2['pro_img'] ?>" alt="Product" />
                             </a>
                             <div class="product-like-cart">
                                 

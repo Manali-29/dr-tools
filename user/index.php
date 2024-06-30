@@ -57,7 +57,7 @@
            
                 <div class="our-services-wrap text-center">
                     <div class="our-services-img">
-                    <a href="listing-page.php?cid=<?php echo  $row['id'] ?>"><img src="admin/Uplode/<?php echo $row['cat_icon'] ?>" alt="" /></a>
+                    <a href="listing-page.php?cid=<?php echo  $row['id'] ?>"><img src="../admin/Uplode/<?php echo $row['cat_icon'] ?>" alt="" /></a>
                     </div>
                     <p><?php echo $row['cat_name'] ?></p>
                 </div>
@@ -98,7 +98,7 @@
                     
                         <div class="products-wrap-img position-relative">
                             <a href="./product-detail.php?id=<?php echo $row['id'] ?>">
-                                <img src="admin/Uplode/<?php echo $row['pro_img'] ?>" alt="Product" />
+                                <img src="../admin/Uplode/<?php echo $row['pro_img'] ?>" alt="Product" />
                             </a>
                             <?php 
                                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) 

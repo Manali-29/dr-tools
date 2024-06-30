@@ -280,7 +280,7 @@
                                                                                         <td>
                                                                                             <div class="products-detail-wrap">
                                                                                                 <div class="product-image-wrap">
-                                                                                                    <img src="admin/Uplode/<?php echo $row4['pro_img'] ?>" alt="" />
+                                                                                                    <img src="../admin/Uplode/<?php echo $row4['pro_img'] ?>" alt="" />
                                                                                                 </div>
                                                                                                 <div class="product-detail-list">
                                                                                                     <p class="p-14-dark"><?php echo $row4['pro_name'] ?></p>

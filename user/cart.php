@@ -60,7 +60,7 @@
                                     <td data-th="Products Details">
                                         <div class="products-detail-wrap">
                                             <div class="product-image-wrap">
-                                                <img src="admin/Uplode/<?php echo $pro_row['pro_img'] ?>" alt="Image"/>
+                                                <img src="../admin/Uplode/<?php echo $pro_row['pro_img'] ?>" alt="Image"/>
                                             </div>
                                             <div class="product-detail-list">
                                                 <p class="p-14-dark" disabled="true"><?php echo $pro_row['pro_name'] ?></p>
