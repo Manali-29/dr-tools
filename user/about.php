@@ -11,7 +11,7 @@
                           <li class="breadcrumb-item active" aria-current="page">About</li>
                         </ol>
                     </nav>
-                </div>
+                </div>manali
                 <div class="col-lg-6">
                     <div class="our-story-wrap">
                         <h1>Our Story</h1>
