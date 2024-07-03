@@ -21,9 +21,9 @@
         $mail->IsHTML(true);
         $mail->CharSet = 'UTF-8';
         //$mail->SMTPDebug = 2; 
-        $mail->Username = "uttamdholariya1@gmail.com";
-        $mail->Password = "rgfk nyor jiiq jpob";
-        $mail->SetFrom("uttamdholariya1@gmail.com");
+        $mail->Username = "sakariyamanali7@gmail.com";
+        $mail->Password = "zhnz eafn afty bybm";
+        $mail->SetFrom("sakariyamanali7@gmail.com");
         $mail->Subject = $subject;
         $mail->Body =$message;
         $mail->AddAddress($to);
