@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    include "smtp/PHPMailerAutoload.php";
+    include "../smtp/PHPMailerAutoload.php";
 
     function send_password_reset($name, $email)
     {
