@@ -64,8 +64,8 @@
                                                         <td><?php echo $row['sub_total']; ?></td>
                                                         <td><?php echo $row['order_status']; ?></td>
                                                         <td><?php echo $row['created_at']; ?></td>
-                                                        <td><a href="../admin/view_order.php?order_id=<?php echo $row['order_id']; ?>" class="js_remove_item me-3"><img src="../assets/images/images/view.svg" alt="View" style="height: 16px;width: 16px;"/></a>
-                                                        <a href="delete_order.php?order_id=<?php echo $row['order_id']; ?>" class="js_remove_item"><img src="../assets/images/deletecon.svg" alt="Delete" /></a></td>
+                                                        <td><a href="../admin/view_order.php?order_id=<?php echo $row['order_id']; ?>" class="js_remove_item me-3"><img src="../user/assets/images/images/view.svg" alt="View" style="height: 16px;width: 16px;"/></a>
+                                                        <a href="delete_order.php?order_id=<?php echo $row['order_id']; ?>" class="js_remove_item"><img src="../user/assets/images/deletecon.svg" alt="Delete" /></a></td>
                                                     </tr>
                                         <?php 
                                                 } 

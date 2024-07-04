@@ -62,8 +62,8 @@
                                     
                                     <td><?php echo $row['cat_name']; ?></td>
                                     
-                                    <td><a href="edit_product.php?id=<?php echo $row['id']; ?>" class="me-3"><img src="../assets/images/images/edit.svg" alt="Edit" /></a>
-                                    <a href="delete_product.php?id=<?php echo $row['id']; ?> & catid=<?php echo $row['category_name']; ?>" class=""><img src="../assets/images/deletecon.svg" alt="Delete" /></a></td>
+                                    <td><a href="edit_product.php?id=<?php echo $row['id']; ?>" class="me-3"><img src="../user/assets/images/images/edit.svg" alt="Edit" /></a>
+                                    <a href="delete_product.php?id=<?php echo $row['id']; ?> & catid=<?php echo $row['category_name']; ?>" class=""><img src="../user/assets/images/deletecon.svg" alt="Delete" /></a></td>
                                 </tr>
                                 <?php } ?>
                             </tbody>

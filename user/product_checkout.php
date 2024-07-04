@@ -65,7 +65,7 @@
                                                         <td>
                                                             <div class="products-detail-wrap">
                                                                 <div class="product-image-wrap">
-                                                                    <img src="admin/Uplode/<?php echo $pro_row['pro_img'] ?>" alt="">
+                                                                    <img src="../admin/Uplode/<?php echo $pro_row['pro_img'] ?>" alt="">
                                                                 </div>
                                                                 <div class="product-detail-list">
                                                                     <p class="p-14-dark"><?php echo $pro_row['pro_name'] ?></p>
@@ -127,11 +127,43 @@
                                                             <label for="cod">Cash on delivery</label>
                                                             <p>Pay with cash on delivery.</p>
                                                         </div>
+                                                        <div class="form-group">
+                                                            <input type="radio" id="online" name="radio-group">
+                                                            <label for="online">Online Payment</label>
+                                                            <p>Pay with online.</p>
+                                                        </div>
+
+                                                        <script>
+                                                            document.getElementById('online').addEventListener('change', function() {
+                                                                if (this.checked) {
+                                                                    document.getElementById('cod_div').style.display = 'none';
+                                                                    document.getElementById('online_payment_div').style.display = 'block';
+                                                                } else {
+                                                                    document.getElementById('cod_div').style.display = 'block';
+                                                                }
+                                                            });
+
+                                                            document.getElementById('cod').addEventListener('change', function() {
+                                                                if (this.checked) {
+                                                                    document.getElementById('online_payment_div').style.display = 'none';
+                                                                    document.getElementById('cod_div').style.display = 'block';
+                                                                } else {
+                                                                    document.getElementById('online_payment_div').style.display = 'block';
+                                                                }
+                                                            });
+                                                        </script>
                                                         
-                                                        <div class="text-center buttons-wrap w-100">
+                                                        <div class="text-center buttons-wrap w-100" style="display: block;" id="cod_div">
                                                             <form action="product_place_order.php" method="POST">
                                                                 <input type="text" name="id" value="<?php echo $_GET['id']?>" hidden>
                                                                 <button type="submit" name="place_order" class="g-btn f-btn mb-0 w-100">Place Order</button>
+                                                            </form>
+                                                        </div>
+                                                        
+                                                        <div class="text-center buttons-wrap w-100" style="display: none;" id="online_payment_div">
+                                                            <form action="payment.php" method="POST">
+                                                                <input type="text" name="id" value="<?php echo $_GET['id']?>" hidden>
+                                                                <button type="submit" name="product_online_payment" class="g-btn f-btn mb-0 w-100">Online Payment</button>
                                                             </form>
                                                         </div>
                                                     </div>

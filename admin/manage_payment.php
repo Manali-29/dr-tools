@@ -41,8 +41,8 @@
                                                     <td><?php echo $row['payment_id']; ?></td>
                                                     <td><?php echo $row['order_id']; ?></td>
                                                     <td><?php echo $row['payment_ststus']; ?></td>
-                                                    <td><a href="view_payment.php?id=<?php echo $row['payment_id']; ?>" class="me-3"><img src="../assets/images/images/view.svg" style="height: 16px;width: 16px;" alt="View"/></a>
-                                                    <a href="delete_payment.php?payment_id=<?php echo $row['payment_id']; ?>" class="js_remove_item"><img src="../assets/images/deletecon.svg" alt="Delete" /></a></td>
+                                                    <td><a href="view_payment.php?id=<?php echo $row['payment_id']; ?>" class="me-3"><img src="../user/assets/images/images/view.svg" style="height: 16px;width: 16px;" alt="View"/></a>
+                                                    <a href="delete_payment.php?payment_id=<?php echo $row['payment_id']; ?>" class="js_remove_item"><img src="../user/assets/images/deletecon.svg" alt="Delete" /></a></td>
                                                 </tr>
                                         <?php
                                             }

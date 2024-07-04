@@ -67,27 +67,26 @@
                                                     $pro_row = mysqli_fetch_assoc($pro_result);
                                                     $total = $cart_detail_row["c_quantity"]*$pro_row['pro_price'];
                                         ?>
-                                                <tr class="alert" role="alert">
-                                                    <td>
-                                                        <div class="products-detail-wrap">
-                                                            <div class="product-image-wrap">
-                                                                <img src="../admin/Uplode/<?php echo $pro_row['pro_img'] ?>" alt="">
+                                                    <tr class="alert" role="alert">
+                                                        <td>
+                                                            <div class="products-detail-wrap">
+                                                                <div class="product-image-wrap">
+                                                                    <img src="../admin/Uplode/<?php echo $pro_row['pro_img'] ?>" alt="">
+                                                                </div>
+                                                                <div class="product-detail-list">
+                                                                    <p class="p-14-dark"><?php echo $pro_row['pro_name'] ?></p>
+                                                                    <!-- <p class="p-14-dark"> <span class="span-title">Color:</span> <span>White</span></p> -->
+                                                                </div>
                                                             </div>
-                                                            <div class="product-detail-list">
-                                                                <p class="p-14-dark"><?php echo $pro_row['pro_name'] ?></p>
-                                                                <!-- <p class="p-14-dark"> <span class="span-title">Color:</span> <span>White</span></p> -->
+                                                        </td>
+                                                        <td>
+                                                            <div class="product-price-wrap text-end qty-wrap">
+                                                                <p class="dark-text">₹<?php echo $cart_detail_row['price']?>/item</p>
+                                                                <p class="p-14-dark"> <span class="span-title">Qty : </span>  <span> <?php echo $cart_detail_row['c_quantity']?> </span></p>
+                                                                <p class="dark-text mt-2">₹<?php echo $total; ?></p>
                                                             </div>
-                                                        </div>
-                                                    
-                                                    </td>
-                                                    <td>
-                                                        <div class="product-price-wrap text-end qty-wrap">
-                                                            <p class="dark-text">₹<?php echo $cart_detail_row['price']?>/item</p>
-                                                            <p class="p-14-dark"> <span class="span-title">Qty : </span>  <span> <?php echo $cart_detail_row['c_quantity']?> </span></p>
-                                                            <p class="dark-text mt-2">₹<?php echo $total; ?></p>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                        </td>
+                                                    </tr>
                                         <?php 
                                                 }
                                             }
@@ -112,14 +111,47 @@
                                                     <!-- <p>All transactions are secure and encrypted.</p> -->
                                                     <div class="checkbox-wrap text-center card-cod-wrap mb-2">
                                                         <div class="form-group">
-                                                            <input type="radio" id="cod" name="radio-group" checked="">
+                                                            <input type="radio" id="cod" name="radio-group" checked>
                                                             <label for="cod">Cash on delivery</label>
                                                             <p>Pay with cash on delivery.</p>
                                                         </div>
-                                                        <div class="text-center buttons-wrap w-100">
+                                                        <div class="form-group">
+                                                            <input type="radio" id="online" name="radio-group">
+                                                            <label for="online">Online Payment</label>
+                                                            <p>Pay with online.</p>
+                                                        </div>
+
+                                                        <script>
+                                                            document.getElementById('online').addEventListener('change', function() {
+                                                                if (this.checked) {
+                                                                    document.getElementById('cod_div').style.display = 'none';
+                                                                    document.getElementById('online_payment_div').style.display = 'block';
+                                                                } else {
+                                                                    document.getElementById('cod_div').style.display = 'block';
+                                                                }
+                                                            });
+
+                                                            document.getElementById('cod').addEventListener('change', function() {
+                                                                if (this.checked) {
+                                                                    document.getElementById('online_payment_div').style.display = 'none';
+                                                                    document.getElementById('cod_div').style.display = 'block';
+                                                                } else {
+                                                                    document.getElementById('online_payment_div').style.display = 'block';
+                                                                }
+                                                            });
+                                                        </script>
+
+                                                        <div class="text-center buttons-wrap w-100" style="display: block;" id="cod_div">
                                                             <form action="place_order.php" method="POST">
                                                                 <input type="text" name="cart_id" value="<?php echo $cart_row['cart_id']?>" hidden>
                                                                 <button type="submit" name="place_order" class="g-btn f-btn mb-0 w-100">Place Order</button>
+                                                            </form>
+                                                        </div>
+
+                                                        <div class="text-center buttons-wrap w-100" style="display: none;" id="online_payment_div">
+                                                            <form action="payment.php" method="POST">
+                                                                <input type="text" name="cart_id" value="<?php echo $cart_row['cart_id']?>" hidden>
+                                                                <button type="submit" name="online_payment" class="g-btn f-btn mb-0 w-100">Online Payment</button>
                                                             </form>
                                                         </div>
                                                     </div>

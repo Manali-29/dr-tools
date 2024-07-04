@@ -39,8 +39,8 @@
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['cat_name']; ?></td>
                                     <td><?php echo $row['product_count']; ?> </td>
-                                    <td><a href="edit_category.php?id=<?php echo $row['id']; ?>" class="me-3"><img src="../assets/images/images/edit.svg" alt="Edit" /></a>
-                                    <a href="delete_category.php?id=<?php echo $row['id']; ?>" class=""><img src="../assets/images/deletecon.svg" alt="Delete" /></a></td>
+                                    <td><a href="edit_category.php?id=<?php echo $row['id']; ?>" class="me-3"><img src="../user/assets/images/images/edit.svg" alt="Edit" /></a>
+                                    <a href="delete_category.php?id=<?php echo $row['id']; ?>" class=""><img src="../user/assets/images/deletecon.svg" alt="Delete" /></a></td>
                                 </tr>
                                 <?php } ?>
                             </tbody>
