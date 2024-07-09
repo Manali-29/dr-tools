@@ -42,7 +42,7 @@
                     
                         <div class="products-wrap-img position-relative">
                             <a href="./product-detail.php?id=<?php echo $row['id'] ?>">
-                                <img src="admin/Uplode/<?php echo $row['pro_img'] ?>" alt="Product" />
+                                <img src="../admin/Uplode/<?php echo $row['pro_img'] ?>" alt="Product" />
                             </a>
                             <div class="product-like-cart">
                                 <!-- <a href="#" class="product-btn"><img src="./assets/images/like-white.svg" alt="Like" /></a> -->
